@@ -1,5 +1,18 @@
-header{
-    background-color: red;
+$body-bg: #3e3e3e;
+    
+.card-img-top{
+    height: 300p;
+    object-fit: cover;
 }
 
-@import "../../node_modules/bootstrap/scss/bootstrap.scss"
+article.card{
+    border: none;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// .card{
+//     width: 15vw;
+//     height: 35vw;
+// }
