@@ -3,8 +3,10 @@ export default class movieCard{
         this.title = movie.title || 'ingen titel'
         this.description = movie.description || 'ingen beskrivelse'
         this.poster = movie.poster || 'https://picsum.photos/200/300'
-        this.year = movie.year || '1900'
-        this.genre = movie.genre || 'Romance'
+        this.year = movie.year || 'xxxx'
+        this.genre = movie.genre || 'undefinded'
+        this.type = movie.type || 'none'
+
     }
 }
 
