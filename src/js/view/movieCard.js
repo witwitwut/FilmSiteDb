@@ -8,5 +8,21 @@ export default class movieCard{
         this.type = movie.type || 'none'
 
     }
+    render(){
+        return `<div class="col-md-3">
+        <article class="card mb-3">
+            <img class="card-img-top" src="${this.poster}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">${this.title}</h5>
+                <p class="card-text">${this.description}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </article>
+    </div>`
+    }
+
+    addToFavorite(){
+
+    }
 }
 
