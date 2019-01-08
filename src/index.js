@@ -3,3 +3,5 @@ import './scss/main.scss'
 import 'babel-polyfill'
 // Import JS files
 import './scss/styles.scss'
+
+import './js/App'

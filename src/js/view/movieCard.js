@@ -1,13 +1,15 @@
 export default class movieCard{
     constructor(movie){
-        this.title = movie.title || 'ingen titel'
-        this.description = movie.description || 'ingen beskrivelse'
-        this.poster = movie.poster || 'https://picsum.photos/200/300'
-        this.year = movie.year || 'xxxx'
-        this.genre = movie.genre || 'undefinded'
-        this.type = movie.type || 'none'
+        this.title = movie.Title 
+        this.description = movie.Plot 
+        this.poster = movie.Poster 
+        this.year = movie.Year
+        this.genre = movie.Genre 
+        this.type = movie.Type
+        this.id = movie.imdbID 
 
     }
+
     render(){
         return `<div class="col-md-3">
         <article class="card mb-3">
@@ -15,7 +17,7 @@ export default class movieCard{
             <div class="card-body">
                 <h5 class="card-title">${this.title}</h5>
                 <p class="card-text">${this.description}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary" data-id="${this.id}">Go somewhere</a>
             </div>
         </article>
     </div>`
