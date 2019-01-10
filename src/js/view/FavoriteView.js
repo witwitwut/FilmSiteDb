@@ -35,7 +35,8 @@ import movieCard from './MovieCard'
 export function createFavouriteView(store){
     let movieCardHTML = ''
     if (store) {
-        store.forEach(movieObject => {
+        console.log(store)
+        Object.values(store).forEach(movieObject => {
             movieCardHTML += new movieCard(movieObject).render()            
         });
     }

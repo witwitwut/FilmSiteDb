@@ -22,9 +22,8 @@ export default class FavoriteController{
 
         favoriteSectionElement.addEventListener('click', (event) => {
             if (event.target.matches('.btn')) {
-                console.log(event.target.dataset.id)
-                // store.removeFromStore(event.target.dataset.id)
-                event.target.parentElement.parentElement.parentElement.remove()
+                this.removeMovieCard(event.target)
+                console.log(event.target)
             }
         } )
 
@@ -35,10 +34,17 @@ export default class FavoriteController{
 
 
     }
-    removeMovieCard(){
+    removeMovieCard(movieElement){
+        
+        console.log(movieElement.dataset.id)
+        //skal finde fejlen ved removeFromStore funktionen
+        // store.removeFromStore(movieElement.dataset.id)
+        movieElement.parentElement.parentElement.parentElement.remove()
 
     }
     updateView(){
         
     }
+
+    
 }

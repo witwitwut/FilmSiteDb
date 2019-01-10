@@ -17,7 +17,7 @@ export default class movieCard{
             <div class="card-body">
                 <h5 class="card-title">${this.title}</h5>
                 <p class="card-text">${this.description}</p>
-                <a href="#" class="btn btn-primary" data-id="${this.id}">Go somewhere</a>
+                <a class="btn btn-primary" data-id="${this.id}">Go somewhere</a>
             </div>
         </article>
     </div>`

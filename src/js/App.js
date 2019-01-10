@@ -1,4 +1,5 @@
 import FavoriteController from './controller/FavoriteController'
+import { setupSearchSection } from './controller/SearchController'
 import { store } from './model/Store';
 
 class App{
@@ -15,10 +16,13 @@ class App{
         document.body.insertAdjacentHTML('afterbegin', headerHTML)
 
         // Search Section Needed
+        setupSearchSection()
 
 
         const favoriteSection = new FavoriteController().setupView()
 
+        
+        const SearchResult = setupSearchSection()
         
 
         const footerHTML = `
@@ -33,6 +37,8 @@ class App{
 
 
         // window.addEventListener('beforeunload',(e) => store.saveToLocalStorage()) 
+
+        
     }
 }
 
