@@ -1,6 +1,18 @@
+import movieCard from "./MovieCard";
+
 
 export function createSearchView(){
-            return    `
+    const searchbar = createSearchbar()
+
+    document.body.insertAdjacentHTML('beforeend', searchbar)
+
+    document.body.insertAdjacentHTML('beforeend', createSearchSection())
+}
+
+
+export function createSearchbar(){
+    
+    return    `
                    <div class="row justify-content-center">
                         <div class="col-12 col-md-10 col-lg-8">
                             <div class="card card-sm">
@@ -22,4 +34,30 @@ export function createSearchView(){
                         </div>
                         <!--end of col-->
                     </div>`
-                }
+}
+
+
+export function createSearchSection(){
+    return `
+        <section class="container">
+            <div id="searchSection" class="row">
+            </div>
+        </section>
+    `
+}
+
+export function SearchView(searchresult){
+    let searchHTML = ''
+    searchresult.forEach(movieobject => {
+        searchHTMLn += new movieCard(searchresult).render()
+    });
+
+    return `
+        <section class="container">
+            <div id="searchSection" class="row">
+            ${searchHTML}
+            </div>
+        </section>
+    
+    `
+}

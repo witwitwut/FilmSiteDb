@@ -21,8 +21,8 @@ class App{
 
         const favoriteSection = new FavoriteController().setupView()
 
-        
-        const SearchResult = setupSearchSection()
+
+        const SearchResult = SetupSearchResult()
         
 
         const footerHTML = `
